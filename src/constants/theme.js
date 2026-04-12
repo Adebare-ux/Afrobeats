@@ -1,0 +1,100 @@
+export const WAVEFORM_FRAMES = [
+  [3, 8, 14, 10, 6, 12, 16, 9, 4, 11, 15, 7],
+  [5, 11, 12, 14, 8, 10, 14, 12, 6, 9, 13, 10],
+  [8, 14, 10, 6, 16, 8, 12, 15, 3, 13, 11, 5],
+  [12, 6, 15, 9, 13, 5, 10, 14, 8, 6, 16, 11],
+];
+
+export const ORANGE = "#F97316";
+export const DARK = "#1a0a00";
+export const CARD = "rgba(255,255,255,0.06)";
+export const BORDER = "rgba(249,115,22,0.3)";
+
+export const styles = {
+  app: {
+    minHeight: "100vh",
+    background: `radial-gradient(ellipse at 20% 0%, #3d1200 0%, #1a0800 40%, #0d0500 100%)`,
+    color: "#fff",
+    fontFamily: "'Syne', 'Outfit', sans-serif",
+    position: "relative",
+    overflow: "hidden",
+  },
+  grain: {
+    position: "fixed",
+    inset: 0,
+    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")`,
+    pointerEvents: "none",
+    zIndex: 0,
+  },
+  content: { position: "relative", zIndex: 1, maxWidth: 960, margin: "0 auto", padding: "0 16px" },
+  header: {
+    display: "flex",
+    alignItems: "center",
+    gap: 12,
+    padding: "20px 0 12px",
+    borderBottom: `1px solid ${BORDER}`,
+    marginBottom: 24,
+  },
+  logo: {
+    width: 40,
+    height: 40,
+    background: ORANGE,
+    borderRadius: 10,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+  },
+  title: { fontSize: 22, fontWeight: 700, letterSpacing: -0.5, margin: 0 },
+  badge: {
+    background: "rgba(249,115,22,0.2)",
+    border: `1px solid ${BORDER}`,
+    borderRadius: 20,
+    padding: "3px 12px",
+    fontSize: 12,
+    color: ORANGE,
+  },
+  card: {
+    background: CARD,
+    border: `1px solid ${BORDER}`,
+    borderRadius: 16,
+    padding: "24px",
+    backdropFilter: "blur(10px)",
+  },
+  input: {
+    width: "100%",
+    background: "rgba(255,255,255,0.08)",
+    border: `1px solid rgba(249,115,22,0.4)`,
+    borderRadius: 10,
+    color: "#fff",
+    fontSize: 15,
+    padding: "11px 14px",
+    outline: "none",
+    boxSizing: "border-box",
+    fontFamily: "inherit",
+  },
+  btn: {
+    background: ORANGE,
+    color: "#fff",
+    border: "none",
+    borderRadius: 10,
+    padding: "12px 24px",
+    fontWeight: 700,
+    fontSize: 15,
+    cursor: "pointer",
+    fontFamily: "inherit",
+    letterSpacing: 0.3,
+  },
+  btnGhost: {
+    background: "transparent",
+    color: ORANGE,
+    border: `1px solid ${ORANGE}`,
+    borderRadius: 10,
+    padding: "11px 24px",
+    fontWeight: 600,
+    fontSize: 15,
+    cursor: "pointer",
+    fontFamily: "inherit",
+  },
+  label: { fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 6, display: "block", letterSpacing: 1, textTransform: "uppercase" },
+};
